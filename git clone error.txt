@@ -1,0 +1,17 @@
+需要到github账号中设置ssh公钥信息。
+
+在 GitHub 网站中的"account settings"：
+
+"Setting -> SSH Keys"->"New SSH key" 
+
+Title填写“id_rsa.pub”或其他信息
+
+在本地：
+$  cat ~/.ssh/id_rsa.pub，如果没有内容，即运行ssh-keygen生成公钥，一直回车，直到生成id_rsa.pub，然后再cat。
+将打印出来的内容拷贝到网站key中，保存。
+
+在本地：
+
+$  ssh -T git@github.com
+
+确认是否连接成功。
